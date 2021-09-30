@@ -3,9 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>toinen</title>
+    <link rel="stylesheet" href="tyyli.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+
+        $(".toggle").on("click", function(){
+
+            if($(".item").hasClass("active")) {
+              $(".item").removeClass("active");
+            }
+            else {
+              $(".item").addClass("active");
+
+            }
+
+        })
+
+
+    });
+
+    </script>
   </head>
   <body>
-    <h1>Tulossa pian :D</h1>
+
+    <nav>
+      <ul class="menu">
+          <li class="logo"><a href="#">Testailua</a></li>
+          <li class="item"><a href="ekaHarjoitus.html">Koti</a></li>
+          <li class="item"><a href="toinen.html">Harjotus</a></li>
+          <li class="item button"><a href="#">Kirjaudu</a></li>
+          <li class="item button secondary"><a href="#">Rekisteröidy</a></li>
+          <li class="toggle"><span class="bars"></span></li>
+      </ul>
+    </nav>
+
+    <div class="vasensivu">
+      <p>hiphei</p>
+
+    </div>
 
   </body>
 </html>
