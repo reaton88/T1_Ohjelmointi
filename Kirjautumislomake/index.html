@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tyyli.css">
+    <title></title>
+  </head>
+  <body>
+  <div class="lomake">
+
+    <h1>Kirjautumislomake</h1>
+    <label for="nimi">Nimi</label><br>
+    <input type="text" id="nimi" value=""><br>
+    <label for="salasana">salasana</label><br>
+    <input type="password" id="salasana" value=""><br>
+      <div class="piilota">
+          <p id="piilota">Tämätieto ei näy</p><br>
+      </div>
+    <label for="Koneenkäyttäjä">Millainen koneen käyttäjä olet?</label><br>
+    <input type="radio" name="koneenk" value="himo">Himopelaaja <br>
+    <input type="radio" name="koneenk" value="oppi">Käytän opiskeluun <br>
+    <input type="radio" name="koneenk" value="none">En käytä konetta <br>
+    <label for="sivut">Mitä mieltä olet sivustani tähän mennessä?</label><br>
+    <input type="checkbox" name="hienot" value="hienot">Todella hienot <br>
+    <input type="checkbox" name="ammatti" value="ammatti">Ammattimeisesti tehty <br>
+    <input type="checkbox" name="osto" value="osto">Ostan sinulta! <br>
+    <label for="lempiaine">Mikä on lemiaineesi Keudassa?</label><br>
+    <select id="lempiaine" name="lempiaine">
+      <option value="none">-----</option>
+      <option value="Ohjelmointi">Ohjelmointi</option>
+      <option value="Ammattiaineet">Ammattiaineet</option>
+      <option value="matikka">Matikka</option>
+    </select><br>
+    <label for="Kehitys">Kerro, miten kehittäisit sivujani?</label><br>
+    <textarea name="Kehitys" rows="8" cols="30"></textarea><br>
+    <button type="onclick" name="button">Lähetä</button>
+
+  </div>
+  </body>
+</html>
