@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script>
+      var pelaajanNimi = prompt('Anna seikkailijallesi nimi');
+      var pelaajanElämäPisteet = prompt('Anna seikkailijallesi elämäpisteet (1-10)');
+
+      while (pelaajanElämäPisteet < 1 || pelaajanElämäPisteet > 10) {
+        pelaajanElämäPisteet = prompt('Virheellinen luku. Anna seikkailijallesi elämäpisteet uudelleen (1-10)');
+      }
+
+      console.log('Tervetuloa mahtavaan seikkailuun ' + pelaajanNimi + '. olet saapunut matkasi päätepisteeseen siniselle vuorelle.');
+
+      var taisteluPaalla = true;
+      var osuuko = Math.floor(Math.random() * 2);
+
+      var pelaajanTekemaVahinko = Math.floor(Math.random() * 5 + 1);
+      var lohTekemaVahinko = Math.floor(Math.random() * 5 + 1);
+
+      var lohElamaPisteet = 4;
+
+      var pelaajalleTehtyVahinko = 0;
+      var lohTehtyVahinko = 0;
+
+      while (taisteluPaalla) {
+        if(osuuko){
+          console.log('Osuit lohikäärmeeseen! Teit vahinkoa ' + pelaajanTekemaVahinko + ' pisteen verran');
+          lohTehtyVahinko += pelaajanTekemaVahinko;
+
+          pelaajanTekemaVahinko = Math.floor(Math.random() * 5 + 1);
+          lohTekemaVahinko = Math.floor(Math.random() * 5 + 1);
+
+          if (lohTehtyVahinko >= lohElamaPisteet) {
+            console.log('Surmasit käärmeen!!!');
+            taisteluPaalla = false;
+          } else {
+            osuuko = Math.floor(Math.random() * 2);
+          }
+
+        }else {
+          console.log('Lohikäärme osui sinuun!!! Lohikäärme teki vahinkoa ' + lohTekemaVahinko + ' pisteen verran');
+          pelaajalleTehtyVahinko += lohTekemaVahinko;
+
+          pelaajanTekemaVahinko = Math.floor(Math.random() * 5 + 1);
+          lohTekemaVahinko = Math.floor(Math.random() * 5 + 1)
+
+          if (pelaajalleTehtyVahinko >= pelaajanElämäPisteet) {
+            console.log('Kuolit HAHAHAHAH!!!');
+            taisteluPaalla = false;
+          }else {
+            osuuko = Math.floor(Math.random() * 2);
+          }
+        }
+
+      }
+
+    </script>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
